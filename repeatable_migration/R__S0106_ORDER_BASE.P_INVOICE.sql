@@ -75,11 +75,10 @@ BEGIN
             WHEN CATEGORY = 'Bronze' AND TOTAL_INVOICE_AMOUNT >= 1000 THEN LOYALTY_POINTS + 30 
             ELSE 0
             END
-    );
-    SELECT * FROM T_CUSTOMER;
-    
+    );  
     
     RETURN PARSE_JSON('{"Result": "SUCCESS"}');
 END;
 
 CALL P_INVOICE_GENERATE();
+
